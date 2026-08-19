@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://fd8k50ot8k7"]
+
+[node name="Pen" type="RigidBody2D" unique_id=1796887122]
