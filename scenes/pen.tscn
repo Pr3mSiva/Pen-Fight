@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://fd8k50ot8k7"]
 
+[ext_resource type="Script" uid="uid://c6l87nu47l2lf" path="res://scripts/pen.gd" id="1_spjee"]
+[ext_resource type="Texture2D" uid="uid://cm0ggcogytfp7" path="res://icon.svg" id="2_xbp3v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s7rlf"]
+radius = 56.0
+height = 242.0
+
 [node name="Pen" type="RigidBody2D" unique_id=1796887122]
+gravity_scale = 0.0
+linear_damp = 3.0
+angular_damp = 3.0
+script = ExtResource("1_spjee")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1360131374]
+position = Vector2(-1, -1)
+shape = SubResource("CapsuleShape2D_s7rlf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1351395598]
+texture = ExtResource("2_xbp3v")

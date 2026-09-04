@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ceeavxt5i4tcq"]
+
+[ext_resource type="PackedScene" uid="uid://fd8k50ot8k7" path="res://scenes/pen.tscn" id="1_o5qli"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7wsd"]
+size = Vector2(25, 1332)
+
+[node name="Main" type="Node2D" unique_id=1553107554]
+
+[node name="DeskVisual" type="ColorRect" parent="." unique_id=1862138213]
+offset_left = 40.0
+offset_top = 65.0
+offset_right = 680.0
+offset_bottom = 1215.0
+color = Color(0.68404967, 0.4652788, 0.14748919, 1)
+
+[node name="Pen" parent="." unique_id=1796887122 instance=ExtResource("1_o5qli")]
+position = Vector2(360, 1000)
+
+[node name="DeskWalls" type="StaticBody2D" parent="." unique_id=1050382727]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeskWalls" unique_id=1263371548]
+position = Vector2(-0.5, 656)
+shape = SubResource("RectangleShape2D_s7wsd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DeskWalls" unique_id=511951932]
+position = Vector2(721, 667)
+shape = SubResource("RectangleShape2D_s7wsd")
